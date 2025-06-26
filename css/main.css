@@ -1,0 +1,292 @@
+/* Main CSS file with root variables and base styles */
+
+:root {
+  /* Common variables for all themes */
+  --header-height: 70px;
+  --footer-border-gradient: linear-gradient(90deg, 
+    rgba(33, 150, 243, 0.1) 0%,
+    rgba(33, 150, 243, 0.8) 50%,
+    rgba(33, 150, 243, 0.1) 100%
+  );
+  --bs-primary: #2196F3; /* Blue accent color */
+  --bs-primary-rgb: 33, 150, 243;
+  --bs-primary-hover: #1976D2;
+  
+  /* Light Theme Colors - More grayscale */
+  --light-bg-primary: #e8e8e8; /* Grayscale background */
+  --light-bg-secondary: #d9d9d9; /* Slightly darker grayscale */
+  --light-text-primary: #000000; /* Pure black text */
+  --light-text-secondary: #333333; /* Dark gray secondary text */
+  --light-muted: #666666; /* Medium gray for muted text */
+  --light-border: rgba(0, 0, 0, 0.12);
+  --light-card-bg: #f5f5f5;
+  --light-card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --light-hero-overlay: rgba(232, 232, 232, 0.7); /* Grayscale overlay */
+  --light-navbar-bg: rgba(232, 232, 232, 0.98); /* Matching navbar to bg */
+  --light-dropdown-bg: #f0f0f0;
+  --light-footer-bg: #d9d9d9;
+  
+  /* Dark Theme Colors - Pure white text */
+  --dark-bg-primary: #121212;
+  --dark-bg-secondary: #1e1e1e;
+  --dark-text-primary: #ffffff; /* Pure white text */
+  --dark-text-secondary: #cccccc; /* Light gray secondary text */
+  --dark-muted: #999999; /* Light gray for muted text */
+  --dark-border: rgba(255, 255, 255, 0.1);
+  --dark-card-bg: #1e1e1e;
+  --dark-card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  --dark-hero-overlay: rgba(18, 18, 18, 0.7);
+  --dark-navbar-bg: rgba(18, 18, 18, 0.98);
+  --dark-dropdown-bg: #212529;
+  --dark-footer-bg: #121212;
+  
+  /* Font properties */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --font-weight-extra: 700;
+  --letter-spacing-normal: 0.015em;
+  --line-height-relaxed: 1.6;
+}
+
+/* Dark Theme Applied */
+body.dark-theme {
+  --bg-primary: var(--dark-bg-primary);
+  --bg-secondary: var(--dark-bg-secondary);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --text-muted: var(--dark-muted);
+  --border: var(--dark-border);
+  --card-bg: var(--dark-card-bg);
+  --card-shadow: var(--dark-card-shadow);
+  --hero-overlay: var(--dark-hero-overlay);
+  --navbar-bg: var(--dark-navbar-bg);
+  --dropdown-bg: var(--dark-dropdown-bg);
+  --footer-bg: var(--dark-footer-bg);
+  
+  background-image: 
+    radial-gradient(circle at 25% 10%, rgba(33, 150, 243, 0.08) 0%, transparent 50%), 
+    radial-gradient(circle at 75% 75%, rgba(33, 150, 243, 0.08) 0%, transparent 50%);
+}
+
+/* Light Theme Applied */
+body.light-theme {
+  --bg-primary: var(--light-bg-primary);
+  --bg-secondary: var(--light-bg-secondary);
+  --text-primary: var(--light-text-primary);
+  --text-secondary: var(--light-text-secondary);
+  --text-muted: var(--light-muted);
+  --border: var(--light-border);
+  --card-bg: var(--light-card-bg);
+  --card-shadow: var(--light-card-shadow);
+  --hero-overlay: var(--light-hero-overlay);
+  --navbar-bg: var(--light-navbar-bg);
+  --dropdown-bg: var(--light-dropdown-bg);
+  --footer-bg: var(--light-footer-bg);
+  
+  background-image: 
+    radial-gradient(circle at 25% 10%, rgba(33, 150, 243, 0.05) 0%, transparent 50%), 
+    radial-gradient(circle at 75% 75%, rgba(33, 150, 243, 0.05) 0%, transparent 50%);
+}
+
+/* Base Body Styling - Enhanced for readability */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+  padding-top: var(--header-height);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-attachment: fixed;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-relaxed);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Fix form control colors in light theme */
+body.light-theme .form-control {
+  background-color: #ffffff;
+  color: var(--text-primary);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+body.light-theme .form-control::placeholder {
+  color: #6c757d;
+}
+
+body.light-theme .form-label {
+  color: var(--text-primary);
+}
+
+body.light-theme .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+/* Fix card text colors in light mode */
+body.light-theme .card-text {
+  color: var(--text-secondary);
+}
+
+/* Fix for modal dialogs */
+.modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+.modal-header {
+  border-bottom-color: var(--border);
+}
+
+.modal-footer {
+  border-top-color: var(--border);
+}
+
+/* Fix for code blocks to ensure proper theme colors */
+pre, code {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+pre {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Custom scrollbar for improved UX */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Make links inside articles more visible */
+article a {
+  color: var(--bs-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color 0.2s ease;
+}
+
+article a:hover {
+  color: var(--bs-primary-hover);
+  text-decoration: underline;
+}
+
+/* Enhanced section heading styles */
+.section-heading {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+/* Light theme text adjustments */
+body.light-theme .section-heading {
+  color: #333333;
+}
+
+body.dark-theme .section-heading {
+  color: #ffffff;
+}
+
+/* Better text contrast for both themes */
+body.light-theme .alumni-section,
+body.light-theme .competitions-section {
+  color: #333333;
+}
+
+body.dark-theme .alumni-section,
+body.dark-theme .competitions-section {
+  color: #ffffff;
+}
+
+/* Enhanced theme-aware styling for logo sections */
+body.light-theme .alumni-section .section-heading,
+body.light-theme .competitions-section .section-heading {
+  color: #333333;
+}
+
+body.dark-theme .alumni-section .section-heading,
+body.dark-theme .competitions-section .section-heading {
+  color: #ffffff;
+}
+
+/* Additional utility classes for the about page */
+.section-heading {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+}
+
+.section-heading:after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, var(--bs-primary), rgba(33, 150, 243, 0.3));
+  bottom: 0;
+  left: 20%;
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Remove any stats container styling in main.css */
+body.light-theme .stats-container,
+body.dark-theme .stats-container {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Force white text in BITS Pilani section */
+#about-bits-section h1,
+#about-bits-section p,
+#about-bits-section .lead {
+  color: #ffffff !important;
+}

@@ -1,0 +1,212 @@
+/* Footer Styling */
+.footer {
+  background-color: var(--footer-bg) !important;
+  border-top: 1px solid var(--border);
+  position: relative;
+  padding: 2rem 0 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--footer-border-gradient);
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 0.75rem;
+  transition: opacity 0.3s ease;
+  /* Removed filter and text-shadow properties */
+}
+
+.footer-logo-dark {
+  display: block;
+}
+
+.footer-logo-light {
+  display: none;
+}
+
+/* Light theme footer logo visibility */
+body.light-theme .footer-logo-dark {
+  display: none;
+}
+
+body.light-theme .footer-logo-light {
+  display: block;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.footer-motto {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.95;
+  margin-left: 12px;
+}
+
+.footer-links, 
+.footer-contact {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links h6, 
+.footer-contact h6 {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+  text-transform: none;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+}
+
+.footer-nav a {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--bs-primary) !important;
+}
+
+.footer-email {
+  font-size: 0.95rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--bs-primary);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Footer bottom - fixed spacing */
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Theme-aware border styling */
+body.dark-theme .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+body.light-theme .footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.footer-bottom p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Footer text color that changes with theme */
+body.light-theme .footer-links h6, 
+body.light-theme .footer-contact h6,
+body.light-theme .footer-motto,
+body.light-theme .footer-nav a,
+body.light-theme .footer-email,
+body.light-theme .social-links a,
+body.light-theme .footer-bottom p {
+  color: #000000 !important; /* Black text in light theme */
+}
+
+body.dark-theme .footer-links h6, 
+body.dark-theme .footer-contact h6,
+body.dark-theme .footer-motto,
+body.dark-theme .footer-nav a,
+body.dark-theme .footer-email,
+body.dark-theme .social-links a,
+body.dark-theme .footer-bottom p {
+  color: #ffffff !important; /* White text in dark theme */
+}
+
+/* Light theme footer background */
+body.light-theme .footer {
+  background-color: #ffffff !important; /* White footer in light theme */
+}
+
+body.dark-theme .footer {
+  background-color: #121212 !important; /* Dark footer in dark theme */
+}
+
+/* Mobile responsiveness for footer */
+@media (max-width: 992px) {
+  .footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer .col-auto {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .footer-brand {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links, 
+  .footer-contact {
+    margin: 0.75rem 0;
+  }
+  
+  .footer-nav {
+    justify-content: center;
+  }
+  
+  .footer-contact-item {
+    justify-content: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+    margin: 0.75rem 0 0;
+  }
+  
+  .footer-bottom {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+}

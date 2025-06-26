@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - BITS Pilani Consulting Club</title>
+    <meta name="description" content="Learn about BITS Pilani Consulting Club's history, approach, and achievements.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS - Modular approach -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/theme-switcher.css">
+</head>
+<body class="dark-theme">
+    <!-- Navigation - Fixed height and alignment -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="photos/bpcclogo.png" alt="BPCC Logo" class="navbar-logo navbar-logo-dark me-2" aria-hidden="true">
+                <img src="photos/bpcclogo_light.png" alt="BPCC Logo" class="navbar-logo navbar-logo-light me-2" aria-hidden="true">
+                <span class="navbar-brand-full">BITS Pilani Consulting Club</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <!-- About nav link with dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link active" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About <i class="fas fa-chevron-down small-arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="#about-bits-section">About BITS Pilani</a></li>
+                            <li><a class="dropdown-item" href="#about-bpcc-section">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html" class="nav-link">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <!-- Theme Toggle Button -->
+                    <li class="nav-item ms-2">
+                        <div class="theme-toggle-wrapper">
+                            <label class="theme-switch" for="themeToggle">
+                                <input type="checkbox" id="themeToggle">
+                                <span class="slider round"></span>
+                                <i class="fas fa-sun theme-icon-light"></i>
+                                <i class="fas fa-moon theme-icon-dark"></i>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- About Section (Combined) -->
+        <div class="container-fluid p-0">
+            <!-- About BITS Pilani Section -->
+            <div id="about-bits-section" class="bits-hero py-5" style="background-image: url('photos/bitspilani.jpg');">
+                <div class="bits-overlay"></div>
+                <div class="container position-relative">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center mb-5">
+                            <h1 class="display-5 fw-bold mb-3 always-white-text">About BITS Pilani</h1>
+                            <p class="lead bits-text always-white-text">
+                                BITS Pilani is a globally acclaimed institution known for its innovation-driven approach to education. For over 60 years, it has consistently 
+                                nurtured exceptional talent, producing professionals who go on to lead 
+                                at some of the world's top consulting and strategy firms, including 
+                                McKinsey & Company, BCG, Bain, EY-Parthenon, Deloitte, and Kearney. 
+                                The institute's legacy of excellence continues to shape industry leaders 
+                                across the globe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Counter Section - Completely stripped of styling -->
+            <div class="container py-5">
+                <div class="row text-center g-4">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-number" data-original="15+">15+</div>
+                        <div class="stat-label">Unicorns</div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-number" data-original="1000+">1000+</div>
+                        <div class="stat-label">Consulting Professionals</div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-number" data-original="1.5L+">1.5L+</div>
+                        <div class="stat-label">Alumni Network</div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-number" data-original="10000+">10000+</div>
+                        <div class="stat-label">Founders & CEOs</div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- About Us Section -->
+            <div id="about-bpcc-section" class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center mb-5">
+                        <h1 class="display-5 fw-bold mb-3">About Us</h1>
+                        <p class="lead about-text">
+                            Founded in 2012, BITS Pilani Consulting Club has established itself as a premier consulting organization, 
+                            recognized for excellence in strategic problem-solving and delivering impactful solutions.
+                            Our core belief is "Strategize. Solve. Succeed." - empowering businesses and individuals through 
+                            data-driven insights, strategic thinking, and innovative solutions that drive real-world impact.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Our Consulting Approach - Updated with gradient cards -->
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h2 class="text-center mb-4">Our Consulting Approach</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="approach-card step-1 h-100">
+                                    <div class="step-number-enhanced mb-3">01</div>
+                                    <h5 class="approach-title mb-3">Understanding Your Needs</h5>
+                                    <p class="approach-text">We as a team spend time understanding what you need and analyze your problem in depth so that you can get the best of our ideas and work.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="approach-card step-2 h-100">
+                                    <div class="step-number-enhanced mb-3">02</div>
+                                    <h5 class="approach-title mb-3">Data Driven Analysis</h5>
+                                    <p class="approach-text">Every idea we propose is backed by data and research, ensuring our solutions are not just creative—but credible, actionable, and aligned with your goals.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="approach-card step-3 h-100">
+                                    <div class="step-number-enhanced mb-3">03</div>
+                                    <h5 class="approach-title mb-3">Strategic Problem Solving</h5>
+                                    <p class="approach-text">We turn insights into focused strategies that solve core problems and align with your vision for impact, growth, and seamless execution.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="approach-card step-4 h-100">
+                                    <div class="step-number-enhanced mb-3">04</div>
+                                    <h5 class="approach-title mb-3">Deliver & Iterate</h5>
+                                    <p class="approach-text">We ensure smooth execution and continuous improvement—delivering the best results through tools, KPIs, and post-launch refinement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Alumni Success Stories - Improved size and centered -->
+                <div class="col-12">
+                    <div class="alumni-section">
+                        <h2 class="section-heading">Our Alumni</h2>
+                        <div class="logo-container">
+                            <div class="logo-row">
+                                <div class="logo-item"><img src="photos/companies/mckinsey.png" alt="McKinsey & Company"></div>
+                                <div class="logo-item"><img src="photos/companies/bcg.png" alt="Boston Consulting Group"></div>
+                                <div class="logo-item"><img src="photos/companies/bain.jpg" alt="Bain & Company"></div>
+                            </div>
+                            <div class="logo-row">
+                                <div class="logo-item"><img src="photos/companies/pwc.png" alt="PwC"></div>
+                                <div class="logo-item"><img src="photos/companies/kpmg.jpg" alt="KPMG"></div>
+                                <div class="logo-item"><img src="photos/companies/ey.jpg" alt="EY"></div>
+                                <div class="logo-item"><img src="photos/companies/deloitte.png" alt="Deloitte"></div>
+                            </div>
+                            <div class="logo-row">
+                                <div class="logo-item"><img src="photos/companies/jpmc.png" alt="JPMorgan Chase"></div>
+                                <div class="logo-item"><img src="photos/companies/blackrock.png" alt="Goldman Sachs"></div>
+                                <div class="logo-item"><img src="photos/companies/goldmansachs.jpg" alt="Goldman Sachs"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Competition Wins - Improved size and centered -->
+                <div class="col-12">
+                    <div class="competitions-section">
+                        <h2 class="section-heading">Case Competitions Won At</h2>
+                        <div class="logo-container">
+                            <div class="logo-row">
+                                <div class="logo-item"><img src="photos/colleges/iimb.png" alt="IIM Bangalore"></div>
+                                <div class="logo-item"><img src="photos/colleges/iima.png" alt="IIM Ahmedabad"></div>
+                                <div class="logo-item"><img src="photos/colleges/iimc.png" alt="IIM Calcutta"></div>
+                            </div>
+                            <div class="logo-row">
+                                <div class="logo-item"><img src="photos/colleges/iitd.png" alt="IIT Delhi"></div>
+                                <div class="logo-item"><img src="photos/colleges/iitkgp.png" alt="IIT Kharagpur"></div>
+                                <div class="logo-item"><img src="photos/colleges/iitg.png" alt="IIT Guwahati"></div>
+                            </div>
+                            <div class="logo-row">
+                                <div class="logo-item"><img src="photos/colleges/srcc.png" alt="SRCC"></div>
+                                <div class="logo-item"><img src="photos/colleges/sscbs.png" alt="SSCBS"></div>
+                                <div class="logo-item"><img src="photos/colleges/munion.png" alt="Mumbai University"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer - Improved horizontal layout with headers and better readability -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Logo and motto -->
+                <div class="col-auto">
+                    <div class="footer-brand d-flex align-items-center">
+                        <img src="photos/bpcclogo.png" alt="BPCC Logo" class="footer-logo footer-logo-dark">
+                        <img src="photos/bpcclogo_light.png" alt="BPCC Logo" class="footer-logo footer-logo-light">
+                        <span class="footer-motto">Strategize. Solve. Succeed.</span>
+                    </div>
+                </div>
+                
+                <!-- Quick Links with header -->
+                <div class="col-auto">
+                    <div class="footer-links">
+                        <h6>Quick Links</h6>
+                        <div class="footer-nav">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="projects.html">Projects</a>
+                            <a href="team.html">Team</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Email with header -->
+                <div class="col-auto">
+                    <div class="footer-contact">
+                        <h6>Contact</h6>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope text-primary me-2"></i>
+                            <span class="footer-email">bitspilaniconsultingclub@bits-pilani.ac.in</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="col-auto">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/bits-pilani-consulting-club/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/bitspilaniconsultingclub/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 BITS Pilani Consulting Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="btn btn-primary btn-sm rounded-circle position-fixed bottom-0 end-0 translate-middle-y m-4 d-none" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
+</html>

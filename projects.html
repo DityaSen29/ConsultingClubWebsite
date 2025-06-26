@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - BITS Pilani Consulting Club</title>
+    <meta name="description" content="Explore the projects and case studies from BITS Pilani Consulting Club.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS - Modular approach -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/theme-switcher.css">
+</head>
+<body class="dark-theme">
+    <!-- Navigation - Fixed height and alignment -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="photos/bpcclogo.png" alt="BPCC Logo" class="navbar-logo navbar-logo-dark me-2" aria-hidden="true">
+                <img src="photos/bpcclogo_light.png" alt="BPCC Logo" class="navbar-logo navbar-logo-light me-2" aria-hidden="true">
+                <span class="navbar-brand-full">BITS Pilani Consulting Club</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <!-- About nav link with dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="about.html" class="nav-link" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About <i class="fas fa-chevron-down small-arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about.html#about-bits-section">About BITS Pilani</a></li>
+                            <li><a class="dropdown-item" href="about.html#about-bpcc-section">About Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link active">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html" class="nav-link">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <!-- Theme Toggle Button -->
+                    <li class="nav-item ms-2">
+                        <div class="theme-toggle-wrapper">
+                            <label class="theme-switch" for="themeToggle">
+                                <input type="checkbox" id="themeToggle">
+                                <span class="slider round"></span>
+                                <i class="fas fa-sun theme-icon-light"></i>
+                                <i class="fas fa-moon theme-icon-dark"></i>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Projects Section -->
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h1 class="display-5 fw-bold mb-3">Our Projects</h1>
+                    <p class="lead">Discover how we've helped businesses strategize, solve complex challenges, and succeed in competitive markets through our data-driven consulting approach.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="project-card visit-health h-100">
+                        <div class="project-header">
+                            <div class="project-logo">
+                                <img src="photos/projectlogos/visit.jpg" alt="Visit Health Logo">
+                            </div>
+                            <div class="project-title">
+                                <h5 class="card-title fw-bold mb-2">Visit Health</h5>
+                                <p class="project-subtitle">Conducted extensive research to analyze India's $100B insurance sector</p>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h6 class="mb-3 mt-4 fw-bold">Key Highlights</h6>
+                            <ul class="project-highlights">
+                                <li>Specific focus on OPD insurance</li>
+                                <li>Conducted product research to benchmark 7+ competitors</li>
+                                <li>Delivered a comprehensive report for official use</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="project-card origin-medical h-100">
+                        <div class="project-header">
+                            <div class="project-logo">
+                                <img src="photos/projectlogos/originmedical.png" alt="Origin Medical Logo">
+                            </div>
+                            <div class="project-title">
+                                <h5 class="card-title fw-bold mb-2">Origin Medical</h5>
+                                <p class="project-subtitle">Accelerated Go-to-Market with strategic lead generation</p>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h6 class="mb-3 mt-4 fw-bold">Key Highlights</h6>
+                            <ul class="project-highlights">
+                                <li>Identifying Ideal Customer Profile</li>
+                                <li>Creating a list of 15,000+ potential leads</li>
+                                <li>Supporting outreach strategy with real-time AI positioning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="project-card belgian-waffle h-100">
+                        <div class="project-header">
+                            <div class="project-logo">
+                                <img src="photos/projectlogos/belgianwaffle.jpg" alt="Belgian Waffle House Logo">
+                            </div>
+                            <div class="project-title">
+                                <h5 class="card-title fw-bold mb-2">The Belgian Waffle House</h5>
+                                <p class="project-subtitle">Boosted Growth with Customer Insights</p>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h6 class="mb-3 mt-4 fw-bold">Key Highlights</h6>
+                            <ul class="project-highlights">
+                                <li>Defining ideal customer profile and target segments</li>
+                                <li>Identifying strategic locations for market expansion</li>
+                                <li>Aligning brand and marketing with consumer trends</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ongoing Projects Section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <div class="ongoing-projects-banner">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h3 class="fw-bold mb-2">Currently Working On</h3>
+                                <p class="mb-3">We are actively engaged with multiple clients across diverse sectors, delivering strategic solutions and driving business growth.</p>
+                                <div class="ongoing-stats d-flex flex-wrap gap-4">
+                                    <div class="stat-item">
+                                        <span class="stat-number-small">5+</span>
+                                        <span class="stat-label-small">Active Projects</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-number-small">3+</span>
+                                        <span class="stat-label-small">Industries</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div class="ongoing-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- Logo and motto -->
+                <div class="col-auto">
+                    <div class="footer-brand d-flex align-items-center">
+                        <img src="photos/bpcclogo.png" alt="BPCC Logo" class="footer-logo footer-logo-dark">
+                        <img src="photos/bpcclogo_light.png" alt="BPCC Logo" class="footer-logo footer-logo-light">
+                        <span class="footer-motto">Strategize. Solve. Succeed.</span>
+                    </div>
+                </div>
+                
+                <!-- Quick Links with header -->
+                <div class="col-auto">
+                    <div class="footer-links">
+                        <h6>Quick Links</h6>
+                        <div class="footer-nav">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="projects.html">Projects</a>
+                            <a href="team.html">Team</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Email with header -->
+                <div class="col-auto">
+                    <div class="footer-contact">
+                        <h6>Contact</h6>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope text-primary me-2"></i>
+                            <span class="footer-email">bitspilaniconsultingclub@bits-pilani.ac.in</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="col-auto">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/bits-pilani-consulting-club/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/bitspilaniconsultingclub/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 BITS Pilani Consulting Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="btn btn-primary btn-sm rounded-circle position-fixed bottom-0 end-0 translate-middle-y m-4 d-none" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
+</html>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>

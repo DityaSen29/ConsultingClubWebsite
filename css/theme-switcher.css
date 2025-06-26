@@ -1,0 +1,152 @@
+/* Theme toggle switch styling - icons inside the toggle */
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 26px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* Light theme state (checkbox checked) - Changed to blue */
+input:checked + .slider {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Icons positioned inside the toggle button */
+.theme-icon-light,
+.theme-icon-dark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Sun icon positioned on the right inside toggle */
+.theme-icon-light {
+  right: 6px;
+  color: #ffffff;
+  opacity: 0;
+}
+
+/* Moon icon positioned on the left inside toggle */
+.theme-icon-dark {
+  left: 6px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* Show/hide icons based on body theme class instead of checkbox state */
+/* Dark theme: show moon on left */
+body.dark-theme .theme-icon-dark {
+  opacity: 1 !important;
+}
+
+body.dark-theme .theme-icon-light {
+  opacity: 0 !important;
+}
+
+/* Light theme: show sun on right */
+body.light-theme .theme-icon-light {
+  opacity: 1 !important;
+}
+
+body.light-theme .theme-icon-dark {
+  opacity: 0 !important;
+}
+
+/* Hover effects */
+.theme-switch:hover .slider {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.theme-switch:hover input:checked + .slider {
+  background: linear-gradient(135deg, #1976D2, #1565C0);
+}
+
+.theme-switch:hover input:not(:checked) + .slider {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+}
+
+/* Accessibility */
+.theme-switch:focus-within .slider {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .theme-switch {
+    width: 45px;
+    height: 24px;
+  }
+  
+  .slider:before {
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(21px);
+  }
+  
+  .theme-icon-light,
+  .theme-icon-dark {
+    font-size: 8px;
+  }
+  
+  .theme-icon-light {
+    right: 5px;
+  }
+  
+  .theme-icon-dark {
+    left: 5px;
+  }
+}

@@ -1,0 +1,74 @@
+/* Utility classes, animations, and form styling */
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Response validation styles */
+.form-control.is-invalid:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.invalid-feedback {
+  display: none;
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-control.is-invalid + .invalid-feedback {
+  display: block;
+}
+
+/* Toast notification styling */
+.toast {
+  opacity: 1 !important;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.toast-container {
+  z-index: 1100;
+}
+
+.toast-body {
+  font-weight: 500;
+}
+
+/* Back to top button styling */
+#backToTop {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop.show {
+  opacity: 1;
+}
+
+#backToTop:hover {
+  transform: translateY(-3px);
+}

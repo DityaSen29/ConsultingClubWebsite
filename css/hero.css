@@ -1,0 +1,232 @@
+/* Hero Section Styles */
+
+/* Fix for Hero Section background images to fill container fully */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .row {
+  min-height: 50vh; /* Ensures vertical centering */
+  display: flex;
+  align-items: center;
+}
+
+/* Hero text - improved centering and better sizing */
+.hero-title, 
+.hero-subtitle {
+  color: white !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.2rem; /* Increased size as requested */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Button styling improvements - Make them more visible */
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-cta .btn {
+  padding: 0.75rem 1.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hero-cta .btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: white !important;
+}
+
+.hero-cta .btn-outline-secondary {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: white !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-cta .btn-primary:hover {
+  background-color: var(--bs-primary-hover);
+  border-color: var(--bs-primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta .btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Improved BITS Pilani hero section */
+.bits-hero {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.bits-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.8); /* Slightly darker overlay */
+  backdrop-filter: blur(4px);
+}
+
+/* Force white text always with multiple important flags */
+.bits-text,
+.bits-hero h1,
+.bits-hero p,
+.bits-hero .lead {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Extra-strong light theme override */
+body.light-theme .bits-text,
+body.light-theme .bits-hero h1,
+body.light-theme .bits-hero p,
+body.light-theme .bits-hero .lead {
+  color: #ffffff !important;
+}
+
+/* Override Bootstrap's text color utilities */
+.bits-hero .text-dark,
+.bits-hero .text-black,
+.bits-hero [class*="text-"] {
+  color: #ffffff !important;
+}
+
+/* Custom class to apply directly to elements */
+.always-white-text {
+  color: #ffffff !important;
+}
+
+/* Carousel styles */
+.carousel-inner {
+  max-height: none;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: auto;
+  background-color: #121212;
+}
+
+.carousel-item img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 500px;
+}
+
+/* Make gallery carousel arrows white */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 50%;
+  filter: brightness(2); /* Make white */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .carousel-item img {
+    max-height: 450px;
+  }
+  
+  .hero {
+    min-height: 90vh;
+  }
+  
+  .bits-hero {
+    min-height: 400px;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    max-height: 350px;
+  }
+  
+  .hero {
+    min-height: 80vh;
+  }
+  
+  .bits-hero {
+    min-height: 350px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    max-height: 250px;
+  }
+  
+  .hero {
+    min-height: 70vh;
+  }
+  
+  .bits-hero {
+    min-height: 300px;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
