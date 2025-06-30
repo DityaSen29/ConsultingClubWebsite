@@ -23,23 +23,27 @@
     <link rel="stylesheet" href="css/theme-switcher.css">
 </head>
 <body class="dark-theme">
-    <!-- Navigation -->
+    <!-- Navigation - Fixed height and alignment -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
+            <!-- Hamburger button (left side in mobile only) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Brand (logo and text together for desktop) -->
             <a class="navbar-brand" href="index.html">
                 <img src="photos/bpcclogo.png" alt="BPCC Logo" class="navbar-logo navbar-logo-dark me-2" aria-hidden="true">
                 <img src="photos/bpcclogo_light.png" alt="BPCC Logo" class="navbar-logo navbar-logo-light me-2" aria-hidden="true">
                 <span class="navbar-brand-full">BITS Pilani Consulting Club</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">Home</a>
                     </li>
+                    <!-- About nav link with dropdown -->
                     <li class="nav-item dropdown">
                         <a href="about.html" class="nav-link" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             About <i class="fas fa-chevron-down small-arrow"></i>
@@ -72,6 +76,9 @@
                 </ul>
             </div>
         </div>
+        
+        <!-- Separate centered text ONLY for mobile -->
+        <span class="navbar-brand-full d-lg-none">BITS Pilani Consulting Club</span>
     </nav>
 
     <main id="main-content">

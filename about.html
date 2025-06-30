@@ -26,14 +26,17 @@
     <!-- Navigation - Fixed height and alignment -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
+            <!-- Hamburger button (left side in mobile only) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Brand (logo and text together for desktop) -->
             <a class="navbar-brand" href="index.html">
                 <img src="photos/bpcclogo.png" alt="BPCC Logo" class="navbar-logo navbar-logo-dark me-2" aria-hidden="true">
                 <img src="photos/bpcclogo_light.png" alt="BPCC Logo" class="navbar-logo navbar-logo-light me-2" aria-hidden="true">
                 <span class="navbar-brand-full">BITS Pilani Consulting Club</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -46,8 +49,8 @@
                             About <i class="fas fa-chevron-down small-arrow"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="#about-bits-section">About BITS Pilani</a></li>
-                            <li><a class="dropdown-item" href="#about-bpcc-section">About Us</a></li>
+                            <li><a class="dropdown-item" href="about.html#about-bits-section">About BITS Pilani</a></li>
+                            <li><a class="dropdown-item" href="about.html#about-bpcc-section">About Us</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -73,6 +76,9 @@
                 </ul>
             </div>
         </div>
+        
+        <!-- Separate centered text ONLY for mobile -->
+        <span class="navbar-brand-full d-lg-none">BITS Pilani Consulting Club</span>
     </nav>
 
     <main id="main-content">
@@ -287,5 +293,4 @@
     <!-- Custom JS -->
     <script src="app.js"></script>
 </body>
-</html>
 </html>

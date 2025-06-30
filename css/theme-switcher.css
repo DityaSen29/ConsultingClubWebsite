@@ -27,9 +27,9 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, #2c3e50, #34495e);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother transition */
   border-radius: 26px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
 }
 
 .slider:before {
@@ -40,9 +40,9 @@
   left: 3px;
   bottom: 3px;
   background: linear-gradient(135deg, #ffffff, #f8f9fa);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother transition */
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
   z-index: 2;
 }
 
@@ -102,7 +102,7 @@ body.light-theme .theme-icon-dark {
 
 /* Hover effects */
 .theme-switch:hover .slider {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .theme-switch:hover input:checked + .slider {

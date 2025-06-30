@@ -282,6 +282,150 @@ document.addEventListener('DOMContentLoaded', function() {
         themeToggle.addEventListener('change', toggleTheme);
     }
     
+    // Enhanced mobile menu functionality
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (navbarToggler && navbarCollapse) {
+        // Handle hamburger click
+        navbarToggler.addEventListener('click', function(e) {
+            e.preventDefault();
+            navbarCollapse.classList.toggle('show');
+            document.body.style.overflow = navbarCollapse.classList.contains('show') ? 'hidden' : '';
+        });
+        
+        // Handle close button click (the × button)
+        navbarCollapse.addEventListener('click', function(e) {
+            if (e.target === navbarCollapse || e.target.matches('::before')) {
+                navbarCollapse.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Handle backdrop click
+        document.addEventListener('click', function(e) {
+            if (navbarCollapse.classList.contains('show') && 
+                !navbarCollapse.contains(e.target) && 
+                !navbarToggler.contains(e.target)) {
+                navbarCollapse.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Handle nav link clicks
+        const navLinks = navbarCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 991) {
+                    navbarCollapse.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 991) {
+                navbarCollapse.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
+    // Enhanced About dropdown functionality
+    const aboutDropdown = document.getElementById('aboutDropdown');
+    const dropdownParent = aboutDropdown?.closest('.dropdown');
+    
+    if (aboutDropdown && dropdownParent) {
+        let hoverTimeout;
+        
+        // Desktop hover functionality - simplified to use CSS
+        if (window.innerWidth > 991) {
+            dropdownParent.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimeout);
+            });
+            
+            dropdownParent.addEventListener('mouseleave', function() {
+                clearTimeout(hoverTimeout);
+            });
+        }
+        
+        // Mobile - About link behavior (navigate directly to about page)
+        aboutDropdown.addEventListener('click', function(e) {
+            if (window.innerWidth <= 991) {
+                // Close mobile menu
+                if (navbarCollapse) {
+                    navbarCollapse.classList.remove('show');
+                    document.body.style.overflow = '';
+                }
+                
+                // Navigate directly to about page
+                window.location.href = 'about.html';
+            }
+        });
+        
+        // Handle dropdown item clicks for desktop only
+        const dropdownItems = dropdownParent.querySelectorAll('.dropdown-item');
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Only handle desktop dropdown functionality
+                if (window.innerWidth > 991) {
+                    // Handle navigation based on text content
+                    const text = this.textContent.trim();
+                    if (text === 'About BITS Pilani') {
+                        e.preventDefault();
+                        window.location.href = 'about.html';
+                    } else if (text === 'About Us') {
+                        e.preventDefault();
+                        const href = 'about.html#about-bpcc-section';
+                        
+                        if (window.location.pathname.includes('about.html')) {
+                            const targetElement = document.getElementById('about-bpcc-section');
+                            if (targetElement) {
+                                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                                const extraOffset = 30;
+                                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight - extraOffset;
+                                
+                                window.scrollTo({
+                                    top: targetPosition,
+                                    behavior: 'smooth'
+                                });
+                                
+                                setTimeout(() => {
+                                    history.pushState(null, null, href);
+                                }, 100);
+                            }
+                        } else {
+                            window.location.href = href;
+                        }
+                    }
+                }
+            });
+        });
+        
+        // Reset dropdown on window resize
+        window.addEventListener('resize', function() {
+            clearTimeout(hoverTimeout);
+        });
+    }
+    
+    // Handle direct hash navigation on page load
+    if (window.location.hash) {
+        setTimeout(() => {
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const extraOffset = 30; // Additional spacing
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight - extraOffset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
+    }
+    
     // Carousel initialization
     const carousel = document.getElementById('eventCarousel');
     if (carousel && typeof bootstrap !== 'undefined') {
@@ -324,5 +468,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Stats counters
     if (document.querySelector('.stat-number')) {
         resetAndAnimateCounters();
+    }
+    
+    // Make mobile navbar title clickable
+    const mobileNavTitle = document.querySelector('.navbar-brand-full.d-lg-none');
+    if (mobileNavTitle) {
+        mobileNavTitle.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        });
     }
 });

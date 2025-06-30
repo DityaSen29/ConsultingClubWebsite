@@ -19,8 +19,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(18, 18, 18, 0.7);
-  backdrop-filter: blur(5px);
+  background-color: rgba(18, 18, 18, 0.65); /* Slightly lighter for better readability */
+  backdrop-filter: blur(8px); /* Enhanced blur */
 }
 
 .hero .container {
@@ -46,7 +46,7 @@
   font-size: 3.2rem; /* Increased size as requested */
   font-weight: 700;
   margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em; /* Improved letter spacing */
 }
 
 .hero-subtitle {
@@ -54,7 +54,7 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: 1.65; /* Better readability */
 }
 
 /* Button styling improvements - Make them more visible */
@@ -66,9 +66,10 @@
 }
 
 .hero-cta .btn {
-  padding: 0.75rem 1.75rem;
+  padding: 0.875rem 2rem; /* Slightly larger padding */
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother transition */
+  letter-spacing: 0.01em; /* Improved letter spacing */
 }
 
 .hero-cta .btn-primary {
@@ -86,15 +87,15 @@
 .hero-cta .btn-primary:hover {
   background-color: var(--bs-primary-hover);
   border-color: var(--bs-primary-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px); /* Enhanced hover effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 .hero-cta .btn-outline-secondary:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px); /* Enhanced hover effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
 /* Improved BITS Pilani hero section */
@@ -115,8 +116,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(18, 18, 18, 0.8); /* Slightly darker overlay */
-  backdrop-filter: blur(4px);
+  background-color: rgba(18, 18, 18, 0.75); /* Better contrast */
+  backdrop-filter: blur(6px); /* Enhanced blur */
 }
 
 /* Force white text always with multiple important flags */
