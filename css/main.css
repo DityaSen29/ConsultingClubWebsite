@@ -105,6 +105,77 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Force DM Sans for all body content and Inter replacement */
+body,
+p,
+.lead,
+.about-text,
+.section,
+.hero-subtitle,
+.service-description,
+.project-description,
+.project-subtitle,
+.project-highlights,
+.team-role,
+.team-bio,
+.footer,
+.footer-nav a,
+.footer-email,
+.footer-bottom p,
+.btn,
+.nav-link,
+.dropdown-item,
+.ongoing-stats,
+.stat-label-small {
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Headings use Georgia - with unified 550 weight */
+h1, h2, h3, h4, h5, h6,
+.section-heading,
+.hero-title,
+.hero .display-4,
+.display-5,
+.display-6,
+.footer-motto,
+.card-title,
+.project-title h5,
+.ongoing-projects-banner h3 {
+  font-family: 'Georgia', serif !important;
+  font-weight: 550 !important; /* Unified weight for all headings */
+  letter-spacing: -0.01em;
+}
+
+/* Hero title should be slightly bolder for impact */
+.hero-title,
+.hero .display-4 {
+  font-weight: 600 !important; /* Keep main hero prominent */
+}
+
+/* Specific font weights for emphasis */
+.fw-bold,
+.font-weight-bold {
+  font-weight: 550 !important; /* Match heading weight */
+}
+
+/* Navbar specific fonts */
+.navbar,
+.navbar-nav,
+.navbar-nav .nav-link,
+.navbar-brand,
+.navbar-toggler,
+.navbar-brand-full {
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-weight: 500 !important; /* Reduced weight */
+}
+
+.navbar-brand-full,
+.navbar-brand .navbar-brand-full {
+  font-weight: 700 !important; /* Keep brand name bold */
+  letter-spacing: -0.01em;
+}
+
 /* Enhanced Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-bold);

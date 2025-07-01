@@ -476,3 +476,18 @@ body.dark-theme .footer-logo-light {
     padding: 0.5rem 0;
   }
 }
+
+.navbar,
+.navbar-nav,
+.navbar-nav .nav-link,
+.navbar-brand,
+.navbar-toggler,
+.navbar-brand-full {
+  font-family: 'DM Sans', Arial, sans-serif !important;
+}
+
+.navbar-brand-full,
+.navbar-brand .navbar-brand-full {
+  font-weight: 750 !important;
+  letter-spacing: -0.01em;
+}

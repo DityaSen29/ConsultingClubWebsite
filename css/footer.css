@@ -56,6 +56,14 @@ body.light-theme .footer-logo-light {
   letter-spacing: -0.005em; /* Improved letter spacing */
 }
 
+.footer-motto,
+.footer-links h6,
+.footer-contact h6 {
+  font-family: 'Georgia', serif !important;
+  font-weight: 550 !important; /* Unified with other headings */
+  letter-spacing: -0.01em;
+}
+
 .footer-links, 
 .footer-contact {
   margin: 0 2rem;
@@ -117,6 +125,14 @@ body.light-theme .footer-logo-light {
   color: var(--bs-primary);
   opacity: 1;
   transform: translateY(-3px); /* Enhanced hover effect */
+}
+
+.footer,
+.footer-nav a,
+.footer-email,
+.footer-bottom p {
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-weight: 400;
 }
 
 /* Footer bottom - fixed spacing */
