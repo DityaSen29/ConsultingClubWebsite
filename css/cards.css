@@ -1,148 +1,119 @@
 /* Card components styling including service cards, approach cards, etc */
 
-/* Service Decks - Restore shaped cards and improved animations */
+/* Service Section Cards - Clean style with top borders */
 .service-deck {
-  position: relative;
-  border-radius: 16px; /* Increased border radius for modern look */
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  height: 100%;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-size: 200% 200%;
-  color: white;
-  background-position: 0 100%;
-  border: none;
-  animation: fadeInUp 0.8s ease forwards;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.service-content {
-  padding: 1.5rem 1.5rem 2rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
   text-align: center;
-  background-color: transparent;
-  position: relative;
-  z-index: 2;
-}
-
-/* The hover effect that doesn't hide content */
-.service-deck:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: inherit;
-  filter: brightness(1.1);
   transition: all 0.3s ease;
-  opacity: 0;
-  z-index: 1; /* Below the content */
+  height: 100%;
+  position: relative;
+  border-top: 4px solid;
 }
 
-.service-deck:hover:before {
-  opacity: 1;
+/* Individual service card top borders */
+.service-deck.market-entry {
+  border-top-color: #3b82f6; /* Blue */
+}
+
+.service-deck.product-consulting {
+  border-top-color: #06b6d4; /* Cyan */
+}
+
+.service-deck.tailored-services {
+  border-top-color: #8b5cf6; /* Purple */
+}
+
+.service-deck.company-strategy {
+  border-top-color: #10b981; /* Emerald */
+}
+
+.service-deck.research {
+  border-top-color: #14b8a6; /* Teal */
+}
+
+.service-deck.market-strategies {
+  border-top-color: #6366f1; /* Indigo */
 }
 
 .service-deck:hover {
-  transform: translateY(-15px) scale(1.03); /* Enhanced hover effect */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Improved shadow on hover */
-  background-position: 0 0;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .service-icon-wrapper {
-  padding: 2.5rem 1.5rem 1rem;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: transparent;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 1.5rem;
 }
 
 .service-icon {
-  font-size: 36px;
-  width: 90px;
-  height: 90px;
+  width: 65px; /* Slightly increased size */
+  height: 65px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  transition: all 0.5s ease;
+  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
+.service-icon i {
+  font-size: 1.6rem; /* Slightly bigger icon */
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+/* Add tilt animation on hover */
 .service-deck:hover .service-icon {
-  transform: rotate(10deg) scale(1.1);
-  background-color: rgba(255, 255, 255, 0.25);
+  transform: rotate(10deg);
 }
 
-/* Service Background Gradients */
-.market-entry {
-  background: linear-gradient(135deg, #0f4c81 0%, #0a2f4d 100%);
-}
-
-.product-consulting {
-  background: linear-gradient(135deg, #2484c6 0%, #165c8c 100%);
-}
-
-.tailored-services {
-  background: linear-gradient(135deg, #2a365f 0%, #1a233d 100%);
-}
-
-.company-strategy {
-  background: linear-gradient(135deg, #2c7b80 0%, #1a4a4d 100%);
-}
-
-.research {
-  background: linear-gradient(135deg, #0f5257 0%, #082e31 100%);
-}
-
-.market-strategies {
-  background: linear-gradient(135deg, #3a5091 0%, #28385e 100%);
-}
-
-/* Service card animations */
-.services-section .row .col-md-6:nth-child(1) .service-deck,
-.services-section .row .col-lg-4:nth-child(1) .service-deck { animation-delay: 0.1s; }
-.services-section .row .col-md-6:nth-child(2) .service-deck,
-.services-section .row .col-lg-4:nth-child(2) .service-deck { animation-delay: 0.2s; }
-.services-section .row .col-md-6:nth-child(3) .service-deck,
-.services-section .row .col-lg-4:nth-child(3) .service-deck { animation-delay: 0.3s; }
-.services-section .row .col-md-6:nth-child(4) .service-deck,
-.services-section .row .col-lg-4:nth-child(4) .service-deck { animation-delay: 0.4s; }
-.services-section .row .col-md-6:nth-child(5) .service-deck,
-.services-section .row .col-lg-4:nth-child(5) .service-deck { animation-delay: 0.5s; }
-.services-section .row .col-md-6:nth-child(6) .service-deck,
-.services-section .row .col-lg-4:nth-child(6) .service-deck { animation-delay: 0.6s; }
-
-.service-title, 
-.service-description {
-  position: relative;
-  z-index: 2;
-  color: white !important;
-}
 
 .service-title {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.01em; /* Improved letter spacing */
+  margin-bottom: 1rem;
+  color: var(--text-color);
 }
 
 .service-description {
-  font-size: 0.9rem;
-  line-height: 1.6; /* Better readability */
-  opacity: 0.92; /* Slightly better contrast */
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Hover effects for icons based on card type */
+.service-deck.market-entry:hover .service-icon {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.service-deck.product-consulting:hover .service-icon {
+  background: #06b6d4;
+  border-color: #06b6d4;
+}
+
+.service-deck.tailored-services:hover .service-icon {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.service-deck.company-strategy:hover .service-icon {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.service-deck.research:hover .service-icon {
+  background: #14b8a6;
+  border-color: #14b8a6;
+}
+
+.service-deck.market-strategies:hover .service-icon {
+  background: #6366f1;
+  border-color: #6366f1;
 }
 
 /* Consulting Approach Cards - Keep the original style with descriptions */
@@ -160,7 +131,7 @@
   border-radius: 20px;
   padding: 2.5rem 2rem; /* Increased padding for more breathing room */
   text-align: center;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1s);
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -1019,6 +990,36 @@ body.light-theme .contact-input:focus {
   font-family: 'Georgia', serif !important;
   font-weight: 550 !important; /* Unified weight */
   letter-spacing: -0.01em;
+}
+
+.service-description,
+.project-description,
+.team-role,
+.team-bio {
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-weight: 400;
+}
+
+.service-description,
+.project-description,
+.team-role,
+.team-bio {
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-weight: 400;
+}
+.project-title,
+.team-name {
+  font-family: 'Georgia', serif !important;
+  font-weight: 550 !important; /* Unified weight */
+  letter-spacing: -0.01em;
+}
+
+.service-description,
+.project-description,
+.team-role,
+.team-bio {
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-weight: 400;
 }
 
 .service-description,
