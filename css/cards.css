@@ -116,7 +116,7 @@
   border-color: #6366f1;
 }
 
-/* Consulting Approach Cards - Keep the original style with descriptions */
+/* Consulting Approach Cards - Smoother animations */
 .consulting-approach-section {
   margin-top: 3rem !important; /* Increased spacing */
 }
@@ -131,7 +131,7 @@
   border-radius: 20px;
   padding: 2.5rem 2rem; /* Increased padding for more breathing room */
   text-align: center;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1s);
+  transition: all 0.3s ease; /* Changed from cubic-bezier to simple ease for smoothness */
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -165,8 +165,8 @@
 }
 
 .approach-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px); /* Reduced from -8px to match home page cards */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Reduced shadow intensity */
 }
 
 .step-number {
@@ -182,6 +182,12 @@
   font-weight: 600;
   margin-bottom: 2rem; /* Increased spacing below step number */
   border: 2px solid var(--border);
+  transition: all 0.3s ease; /* Added smooth transition for step number */
+}
+
+/* Add subtle step number animation on card hover */
+.approach-card:hover .step-number {
+  transform: scale(1.05); /* Subtle scale effect */
 }
 
 .approach-title {
@@ -1001,7 +1007,7 @@ body.light-theme .contact-input:focus {
 }
 
 .service-description,
-.project-description,
+project-description,
 .team-role,
 .team-bio {
   font-family: 'DM Sans', Arial, sans-serif !important;
@@ -1031,7 +1037,7 @@ body.light-theme .contact-input:focus {
 }
 
 .service-description,
-.project-description,
+project-description,
 .team-role,
 .team-bio {
   font-family: 'DM Sans', Arial, sans-serif !important;
