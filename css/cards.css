@@ -194,9 +194,9 @@
 
 .approach-title {
   font-family: 'Georgia', serif !important;
-  font-weight: 500 !important;
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem; /* Increased spacing below title */
+  font-weight: 700 !important;
+  font-size: 1.05rem; /* Reduced from 1.25rem to 1.1rem to prevent wrapping */
+  margin-bottom: 1.5rem;
   color: var(--text-primary);
 }
 
