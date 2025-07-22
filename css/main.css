@@ -314,15 +314,27 @@ body.dark-theme .section-heading {
   color: #ffffff;
 }
 
-/* Better text contrast for both themes */
-body.light-theme .alumni-section,
-body.light-theme .competitions-section {
-  color: #333333;
+/* Better text contrast for both themes - ensure subtexts are white */
+body.light-theme .service-description,
+body.light-theme .approach-description,
+body.light-theme .project-subtitle,
+body.light-theme .project-highlights li,
+body.light-theme .team-designation,
+body.light-theme .contact-person,
+body.light-theme .contact-detail,
+body.light-theme .social-btn {
+  color: #000000 !important; /* Black subtexts in light theme */
 }
 
-body.dark-theme .alumni-section,
-body.dark-theme .competitions-section {
-  color: #ffffff;
+body.dark-theme .service-description,
+body.dark-theme .approach-description,
+body.dark-theme .project-subtitle,
+body.dark-theme .project-highlights li,
+body.dark-theme .team-designation,
+body.dark-theme .contact-person,
+body.dark-theme .contact-detail,
+body.dark-theme .social-btn {
+  color: #ffffff !important; /* White subtexts in dark theme */
 }
 
 /* Enhanced theme-aware styling for logo sections */

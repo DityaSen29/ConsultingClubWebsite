@@ -70,6 +70,7 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.65; /* Better readability */
+  color: white !important; /* Ensure hero subtitle is always white */
 }
 
 /* Button styling improvements - Make them more visible */
