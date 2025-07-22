@@ -91,7 +91,7 @@ body.light-theme {
 
 /* Base Body Styling - Enhanced for readability */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   overflow-x: hidden;
   padding-top: var(--header-height);
   background-color: var(--bg-primary);
@@ -105,7 +105,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Force DM Sans for all body content and Inter replacement */
+/* Force SF Pro for all body content */
 body,
 p,
 .lead,
@@ -126,12 +126,20 @@ p,
 .nav-link,
 .dropdown-item,
 .ongoing-stats,
-.stat-label-small {
-  font-family: 'DM Sans', Arial, sans-serif !important;
+.stat-label-small,
+.approach-description,
+.approach-text,
+.contact-input,
+.form-label,
+.contact-person,
+.contact-detail,
+.social-btn,
+.team-designation {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
   font-weight: 400 !important;
 }
 
-/* Headings use Georgia - with unified 550 weight */
+/* Headings use Georgia */
 h1, h2, h3, h4, h5, h6,
 .section-heading,
 .hero-title,
@@ -141,38 +149,46 @@ h1, h2, h3, h4, h5, h6,
 .footer-motto,
 .card-title,
 .project-title h5,
-.ongoing-projects-banner h3 {
+.ongoing-projects-banner h3,
+.service-title,
+.approach-title,
+.team-name,
+.contact-form-title,
+.contact-info-title,
+.contact-section-title,
+.step-number,
+.step-number-enhanced {
   font-family: 'Georgia', serif !important;
-  font-weight: 550 !important; /* Unified weight for all headings */
+  font-weight: 550 !important;
   letter-spacing: -0.01em;
 }
 
 /* Hero title should be slightly bolder for impact */
 .hero-title,
 .hero .display-4 {
-  font-weight: 600 !important; /* Keep main hero prominent */
+  font-weight: 600 !important;
 }
 
 /* Specific font weights for emphasis */
 .fw-bold,
 .font-weight-bold {
-  font-weight: 550 !important; /* Match heading weight */
+  font-weight: 550 !important;
 }
 
-/* Navbar specific fonts */
+/* Navbar specific fonts - use SF Pro */
 .navbar,
 .navbar-nav,
 .navbar-nav .nav-link,
 .navbar-brand,
 .navbar-toggler,
 .navbar-brand-full {
-  font-family: 'DM Sans', Arial, sans-serif !important;
-  font-weight: 500 !important; /* Reduced weight */
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+  font-weight: 500 !important;
 }
 
 .navbar-brand-full,
 .navbar-brand .navbar-brand-full {
-  font-weight: 700 !important; /* Keep brand name bold */
+  font-weight: 700 !important;
   letter-spacing: -0.01em;
 }
 

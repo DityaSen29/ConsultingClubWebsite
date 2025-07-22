@@ -77,12 +77,14 @@
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--text-color);
+  font-family: 'Georgia', serif !important;
 }
 
 .service-description {
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 0;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
 }
 
 /* Hover effects for icons based on card type */
@@ -199,7 +201,7 @@
 }
 
 .approach-description {
-  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
   font-weight: 400;
   font-size: 0.95rem; /* Slightly larger for better readability */
   line-height: 1.7; /* Better line spacing */
@@ -235,6 +237,85 @@
   
   .approach-description {
     font-size: 0.9rem;
+  }
+}
+
+/* Client Logos Section */
+.client-logos-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.client-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+  grid-template-rows: repeat(2, 1fr); /* Fixed 2 rows */
+  gap: 2.5rem;
+  margin-top: 3rem;
+  max-width: 900px; /* Reduced max width for better proportions */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client-logo-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem; /* Increased padding for better proportion */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px; /* Increased height for better proportions */
+  text-decoration: none;
+}
+
+.client-logo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.client-logo-item img {
+  max-width: 100%;
+  max-height: 90px; /* Increased max height */
+  object-fit: contain;
+}
+
+/* Responsive adjustments for client logos */
+@media (max-width: 992px) {
+  .client-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 600px;
+  }
+  
+  .client-logo-item {
+    padding: 2rem 1.5rem;
+    min-height: 120px;
+  }
+  
+  .client-logo-item img {
+    max-height: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .client-logos-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1.5rem;
+    max-width: 400px;
+  }
+  
+  .client-logo-item {
+    padding: 1.5rem;
+    min-height: 100px;
+  }
+  
+  .client-logo-item img {
+    max-height: 60px;
   }
 }
 
@@ -330,7 +411,7 @@
   font-size: 0.95rem;
   margin-bottom: 0;
   line-height: 1.4;
-  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
 }
 
 .project-content {
@@ -359,7 +440,7 @@
   display: list-item;
   margin-left: 0;
   position: relative;
-  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
 }
 
 /* Completely remove any icon styling */
@@ -666,6 +747,7 @@ body.light-theme .team-card {
   margin-bottom: 0.5rem;
   color: var(--text-primary);
   letter-spacing: -0.01em; /* Improved letter spacing */
+  font-family: 'Georgia', serif !important;
 }
 
 .team-designation {
@@ -673,6 +755,7 @@ body.light-theme .team-card {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   font-weight: 400;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
 }
 
 .team-social-buttons {
@@ -771,6 +854,7 @@ body.light-theme .contact-info-card {
   font-weight: 600;
   margin-bottom: 2rem;
   color: var(--text-primary);
+  font-family: 'Georgia', serif !important;
 }
 
 .contact-input {
@@ -842,6 +926,7 @@ body.light-theme .contact-input:focus {
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.75rem;
+  font-family: 'Georgia', serif !important;
 }
 
 .contact-person {
@@ -849,6 +934,7 @@ body.light-theme .contact-input:focus {
   font-weight: 500;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
 }
 
 .contact-detail {
@@ -858,20 +944,7 @@ body.light-theme .contact-input:focus {
   color: var(--text-secondary);
   font-size: 0.95rem;
   padding: 0.25rem 0;
-}
-
-.contact-icon {
-  color: var(--bs-primary);
-  font-size: 1rem;
-  width: 18px;
-  text-align: center;
-}
-
-/* Social Media Buttons - Simple without boxes */
-.social-media-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
 }
 
 .social-btn {
@@ -885,24 +958,7 @@ body.light-theme .contact-input:focus {
   font-size: 0.95rem;
   transition: all 0.3s ease;
   color: var(--text-secondary);
-}
-
-.social-btn i {
-  font-size: 1.2rem;
-  width: 20px;
-  text-align: center;
-  color: var(--bs-primary);
-}
-
-.social-btn:hover {
-  color: var(--text-primary);
-  text-decoration: none;
-  transform: translateX(5px);
-}
-
-.social-btn:hover i {
-  color: var(--bs-primary);
-  filter: brightness(1.2);
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
 }
 
 /* Enhanced form validation styling */
@@ -991,6 +1047,24 @@ body.light-theme .contact-input:focus {
   font-family: 'DM Sans', Arial, sans-serif !important;
   font-weight: 400;
 }
+
+
+/* Font styles for titles and descriptions */
+.service-title,
+.project-title,
+.team-name {
+  font-family: 'Georgia', serif !important;
+  font-weight: 550 !important; /* Unified weight */
+  letter-spacing: -0.01em;
+}
+
+.service-description,
+.project-description,
+.team-role,
+.team-bio {
+  font-family: 'DM Sans', Arial, sans-serif !important;
+  font-weight: 400;
+}
 .project-title,
 .team-name {
   font-family: 'Georgia', serif !important;
@@ -1029,7 +1103,7 @@ project-description,
 }
 
 .service-description,
-.project-description,
+project-description,
 .team-role,
 .team-bio {
   font-family: 'DM Sans', Arial, sans-serif !important;
