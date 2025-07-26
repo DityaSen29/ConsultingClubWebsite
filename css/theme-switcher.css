@@ -65,39 +65,38 @@ input:checked + .slider:before {
   transition: all 0.3s ease;
   pointer-events: none;
   z-index: 1;
+  color: #ffffff;
 }
 
 /* Sun icon positioned on the right inside toggle */
 .theme-icon-light {
   right: 6px;
-  color: #ffffff;
-  opacity: 0;
+  display: none; /* Hide by default */
 }
 
 /* Moon icon positioned on the left inside toggle */
 .theme-icon-dark {
   left: 6px;
-  color: #ffffff;
-  opacity: 1;
+  display: block; /* Show by default (dark theme default) */
 }
 
-/* Show/hide icons based on body theme class instead of checkbox state */
-/* Dark theme: show moon on left */
+/* Show/hide icons based on body theme class using display */
+/* Dark theme: show moon, hide sun */
 body.dark-theme .theme-icon-dark {
-  opacity: 1 !important;
+  display: block !important;
 }
 
 body.dark-theme .theme-icon-light {
-  opacity: 0 !important;
+  display: none !important;
 }
 
-/* Light theme: show sun on right */
+/* Light theme: show sun, hide moon */
 body.light-theme .theme-icon-light {
-  opacity: 1 !important;
+  display: block !important;
 }
 
 body.light-theme .theme-icon-dark {
-  opacity: 0 !important;
+  display: none !important;
 }
 
 /* Hover effects */

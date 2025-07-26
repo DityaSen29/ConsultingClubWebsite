@@ -14,18 +14,17 @@ function setTheme(themeName) {
         themeToggle.checked = themeName === 'light-theme';
     }
     
-    setTimeout(() => {
-        const moonIcon = document.querySelector('.theme-icon-dark');
-        const sunIcon = document.querySelector('.theme-icon-light');
-        
-        if (themeName === 'dark-theme') {
-            if (moonIcon) moonIcon.style.opacity = '1';
-            if (sunIcon) sunIcon.style.opacity = '0';
-        } else {
-            if (sunIcon) sunIcon.style.opacity = '1';
-            if (moonIcon) moonIcon.style.opacity = '0';
-        }
-    }, 50);
+    // Immediately set icon visibility based on theme
+    const moonIcon = document.querySelector('.theme-icon-dark');
+    const sunIcon = document.querySelector('.theme-icon-light');
+    
+    if (themeName === 'dark-theme') {
+        if (moonIcon) moonIcon.style.opacity = '1';
+        if (sunIcon) sunIcon.style.opacity = '0';
+    } else {
+        if (sunIcon) sunIcon.style.opacity = '1';
+        if (moonIcon) moonIcon.style.opacity = '0';
+    }
     
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor) {
@@ -40,12 +39,19 @@ function initTheme() {
     const savedTheme = localStorage.getItem('theme') || 'dark-theme';
     setTheme(savedTheme);
     
-    if (!document.querySelector('meta[name="theme-color"]')) {
-        const metaTag = document.createElement('meta');
-        metaTag.name = 'theme-color';
-        metaTag.content = savedTheme === 'dark-theme' ? '#121212' : '#f0f2f5';
-        document.head.appendChild(metaTag);
-    }
+    // Ensure icons are properly initialized
+    setTimeout(() => {
+        const moonIcon = document.querySelector('.theme-icon-dark');
+        const sunIcon = document.querySelector('.theme-icon-light');
+        
+        if (savedTheme === 'dark-theme') {
+            if (moonIcon) moonIcon.style.opacity = '1';
+            if (sunIcon) sunIcon.style.opacity = '0';
+        } else {
+            if (sunIcon) sunIcon.style.opacity = '1';
+            if (moonIcon) moonIcon.style.opacity = '0';
+        }
+    }, 100);
 }
 
 function toggleTheme() {
