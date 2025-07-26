@@ -49,7 +49,9 @@
   --line-height-relaxed: 1.6;
 }
 
-/* Dark Theme Applied */
+/* Enhanced theme application - immediate */
+html.dark-theme,
+html.dark-theme body,
 body.dark-theme {
   --bg-primary: var(--dark-bg-primary);
   --bg-secondary: var(--dark-bg-secondary);
@@ -64,12 +66,17 @@ body.dark-theme {
   --dropdown-bg: var(--dark-dropdown-bg);
   --footer-bg: var(--dark-footer-bg);
   
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  
   background-image: 
     radial-gradient(circle at 25% 10%, rgba(33, 150, 243, 0.08) 0%, transparent 50%), 
     radial-gradient(circle at 75% 75%, rgba(33, 150, 243, 0.08) 0%, transparent 50%);
 }
 
 /* Light Theme Applied */
+html.light-theme,
+html.light-theme body,
 body.light-theme {
   --bg-primary: var(--light-bg-primary);
   --bg-secondary: var(--light-bg-secondary);
@@ -83,6 +90,9 @@ body.light-theme {
   --navbar-bg: var(--light-navbar-bg);
   --dropdown-bg: var(--light-dropdown-bg);
   --footer-bg: var(--light-footer-bg);
+  
+  background-color: #e8e8e8 !important;
+  color: #000000 !important;
   
   background-image: 
     radial-gradient(circle at 25% 10%, rgba(33, 150, 243, 0.05) 0%, transparent 50%), 

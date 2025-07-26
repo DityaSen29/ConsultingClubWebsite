@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - BITS Pilani Consulting Club</title>
     <meta name="description" content="Explore the projects and case studies from BITS Pilani Consulting Club.">
+    
+    <!-- Critical: Apply theme before any CSS loads -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark-theme';
+            document.documentElement.className = savedTheme;
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -23,7 +33,7 @@
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/theme-switcher.css">
 </head>
-<body class="dark-theme">
+<body>
     <!-- Navigation - Fixed height and alignment -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -50,7 +60,7 @@
                             About <i class="fas fa-chevron-down small-arrow"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="about.html#about-bits-section">About BITS Pilani</a></li>
+                            <li><a class="dropdown-item" href="about.html">About BITS Pilani</a></li>
                             <li><a class="dropdown-item" href="about.html#about-bpcc-section">About Us</a></li>
                         </ul>
                     </li>

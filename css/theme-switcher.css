@@ -27,9 +27,9 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, #2c3e50, #34495e);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother transition */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 26px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .slider:before {
@@ -40,13 +40,13 @@
   left: 3px;
   bottom: 3px;
   background: linear-gradient(135deg, #ffffff, #f8f9fa);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother transition */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
-/* Light theme state (checkbox checked) - Changed to blue */
+/* Light theme state (checkbox checked) */
 input:checked + .slider {
   background: linear-gradient(135deg, #2196F3, #1976D2);
 }
@@ -71,37 +71,37 @@ input:checked + .slider:before {
 /* Sun icon positioned on the right inside toggle */
 .theme-icon-light {
   right: 6px;
-  display: none; /* Hide by default */
+  opacity: 0;
 }
 
 /* Moon icon positioned on the left inside toggle */
 .theme-icon-dark {
   left: 6px;
-  display: block; /* Show by default (dark theme default) */
+  opacity: 1;
 }
 
-/* Show/hide icons based on body theme class using display */
-/* Dark theme: show moon, hide sun */
+/* Show/hide icons based on body theme class */
+/* Dark theme: show moon on left */
 body.dark-theme .theme-icon-dark {
-  display: block !important;
+  opacity: 1 !important;
 }
 
 body.dark-theme .theme-icon-light {
-  display: none !important;
+  opacity: 0 !important;
 }
 
-/* Light theme: show sun, hide moon */
+/* Light theme: show sun on right */
 body.light-theme .theme-icon-light {
-  display: block !important;
+  opacity: 1 !important;
 }
 
 body.light-theme .theme-icon-dark {
-  display: none !important;
+  opacity: 0 !important;
 }
 
 /* Hover effects */
 .theme-switch:hover .slider {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .theme-switch:hover input:checked + .slider {
@@ -126,7 +126,7 @@ body.light-theme .theme-icon-dark {
   }
   
   .slider:before {
-    height: 18px;
+    height: 18px;  
     width: 18px;
     left: 3px;
     bottom: 3px;

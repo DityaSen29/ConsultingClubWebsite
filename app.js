@@ -1,3 +1,35 @@
+// Critical: Apply theme immediately before any rendering occurs
+(function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark-theme';
+    // Apply to both html and body immediately
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.documentElement.className = savedTheme;
+    // Use a style tag to ensure immediate application
+    const style = document.createElement('style');
+    style.textContent = `
+        html.light-theme, html.light-theme body { 
+            background-color: #e8e8e8 !important; 
+            color: #000000 !important; 
+        }
+        html.dark-theme, html.dark-theme body { 
+            background-color: #121212 !important; 
+            color: #ffffff !important; 
+        }
+        /* Immediate toggle state styling */
+        .theme-switch input { opacity: 0; width: 0; height: 0; }
+        html.light-theme .theme-switch input { opacity: 0; width: 0; height: 0; }
+    `;
+    document.head.appendChild(style);
+    
+    // Set toggle state immediately when DOM elements are available
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggleElement = document.getElementById('themeToggle');
+        if (themeToggleElement) {
+            themeToggleElement.checked = savedTheme === 'light-theme';
+        }
+    });
+})();
+
 // DOM Elements
 const backToTopButton = document.getElementById('backToTop');
 const themeToggle = document.getElementById('themeToggle');
@@ -5,16 +37,32 @@ const themeToggle = document.getElementById('themeToggle');
 // Google Sheets configuration
 const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzrJkvB7yZgxoeYdRORDlvvLWeiR8Ty0tnaAQXTwyFnjVRrVxfAkSG4IkCR2Z2Yo-_-/exec';
 
-// Theme handling
+// Theme handling - simplified since HTML handles initial application
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+    document.documentElement.setAttribute('data-theme', themeName);
     document.body.className = themeName;
     
+    // Update toggle state
     if (themeToggle) {
         themeToggle.checked = themeName === 'light-theme';
     }
     
-    // Immediately set icon visibility based on theme
+    // Update icons immediately
+    updateThemeIcons(themeName);
+    
+    // Update meta theme color
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+        metaThemeColor.setAttribute(
+            'content', 
+            themeName === 'dark-theme' ? '#121212' : '#e8e8e8'
+        );
+    }
+}
+
+function updateThemeIcons(themeName) {
     const moonIcon = document.querySelector('.theme-icon-dark');
     const sunIcon = document.querySelector('.theme-icon-light');
     
@@ -25,41 +73,35 @@ function setTheme(themeName) {
         if (sunIcon) sunIcon.style.opacity = '1';
         if (moonIcon) moonIcon.style.opacity = '0';
     }
-    
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    if (metaThemeColor) {
-        metaThemeColor.setAttribute(
-            'content', 
-            themeName === 'dark-theme' ? '#121212' : '#f0f2f5'
-        );
-    }
 }
 
 function initTheme() {
     const savedTheme = localStorage.getItem('theme') || 'dark-theme';
-    setTheme(savedTheme);
     
-    // Ensure icons are properly initialized
-    setTimeout(() => {
-        const moonIcon = document.querySelector('.theme-icon-dark');
-        const sunIcon = document.querySelector('.theme-icon-light');
-        
-        if (savedTheme === 'dark-theme') {
-            if (moonIcon) moonIcon.style.opacity = '1';
-            if (sunIcon) sunIcon.style.opacity = '0';
-        } else {
-            if (sunIcon) sunIcon.style.opacity = '1';
-            if (moonIcon) moonIcon.style.opacity = '0';
-        }
-    }, 100);
+    // Ensure theme is applied to body (in case IIFE didn't catch it)
+    document.body.className = savedTheme;
+    
+    // Set toggle state (this is now redundant but kept for safety)
+    if (themeToggle) {
+        themeToggle.checked = savedTheme === 'light-theme';
+    }
+    
+    // Set up meta tag
+    if (!document.querySelector('meta[name="theme-color"]')) {
+        const metaTag = document.createElement('meta');
+        metaTag.name = 'theme-color';
+        metaTag.content = savedTheme === 'dark-theme' ? '#121212' : '#e8e8e8';
+        document.head.appendChild(metaTag);
+    }
+    
+    // Update icons
+    updateThemeIcons(savedTheme);
 }
 
 function toggleTheme() {
-    if (localStorage.getItem('theme') === 'light-theme') {
-        setTheme('dark-theme');
-    } else {
-        setTheme('light-theme');
-    }
+    const currentTheme = localStorage.getItem('theme') || 'dark-theme';
+    const newTheme = currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
+    setTheme(newTheme);
 }
 
 // Form submission handler
@@ -380,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const text = this.textContent.trim();
                     if (text === 'About BITS Pilani') {
                         e.preventDefault();
-                        window.location.href = 'about.html';
+                        window.location.href = 'about.html'; // Navigate to top of about page, no hash
                     } else if (text === 'About Us') {
                         e.preventDefault();
                         const href = 'about.html#about-bpcc-section';
