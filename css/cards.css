@@ -406,6 +406,22 @@ body.light-theme .ongoing-projects-banner {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
+/* Hide ongoing icon on mobile devices */
+@media (max-width: 768px) {
+  .ongoing-icon {
+    display: none;
+  }
+  
+  .ongoing-projects-banner .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .ongoing-projects-banner .col-md-4 {
+    display: none;
+  }
+}
+
 /* Alumni & Competition sections */
 .alumni-section, .competitions-section {
   margin: 4rem auto;
