@@ -76,7 +76,7 @@ function updateThemeIcons(themeName) {
 }
 
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'dark-theme';
+    const savedTheme = localStorage.getItem('theme') ||  'dark-theme';
     
     // Ensure theme is applied to body (in case IIFE didn't catch it)
     document.body.className = savedTheme;
