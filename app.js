@@ -35,8 +35,7 @@ const backToTopButton = document.getElementById('backToTop');
 const themeToggle = document.getElementById('themeToggle');
 
 // Google Sheets configuration
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzrJkvB7yZgxoeYdRORDlvvLWeiR8Ty0tnaAQXTwyFnjVRrVxfAkSG4IkCR2Z2Yo-_-/exec';
-
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzkXRXG4iqbZuPDxxHPoaJGcGRSnVLd4BCthxq5YN0BeBn7A-d0ahJ2ZxxspB46q11R/exec';
 // Theme handling - simplified since HTML handles initial application
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
