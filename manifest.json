@@ -1,0 +1,21 @@
+{
+  "name": "BITS Pilani Consulting Club",
+  "short_name": "BPCC",
+  "description": "Premier student-led consulting organization at BITS Pilani with 10+ years legacy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#2196F3",
+  "icons": [
+    {
+      "src": "photos/bpcclogo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "photos/bpcclogo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
